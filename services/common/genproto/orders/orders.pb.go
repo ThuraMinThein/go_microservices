@@ -4,14 +4,15 @@
 // 	protoc        v3.21.12
 // source: orders.proto
 
-package go_microservices
+package orders
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -306,9 +307,10 @@ const file_orders_proto_rawDesc = "" +
 	"customerID\x18\x01 \x01(\x05R\n" +
 	"customerID\"2\n" +
 	"\x10GetOrderResponse\x12\x1e\n" +
-	"\x06orders\x18\x01 \x03(\v2\x06.OrderR\x06orders2J\n" +
+	"\x06orders\x18\x01 \x03(\v2\x06.OrderR\x06orders2~\n" +
 	"\fOrderService\x12:\n" +
-	"\vCreateOrder\x12\x13.CreateOrderRequest\x1a\x14.CreateOrderResponse\"\x00B+Z)github.com/ThuraMinThein/go_microservicesb\x06proto3"
+	"\vCreateOrder\x12\x13.CreateOrderRequest\x1a\x14.CreateOrderResponse\"\x00\x122\n" +
+	"\tGetOrders\x12\x10.GetOrderRequest\x1a\x11.GetOrderResponse\"\x00B+Z)github.com/ThuraMinThein/go_microservicesb\x06proto3"
 
 var (
 	file_orders_proto_rawDescOnce sync.Once
@@ -333,9 +335,11 @@ var file_orders_proto_goTypes = []any{
 var file_orders_proto_depIdxs = []int32{
 	0, // 0: GetOrderResponse.orders:type_name -> Order
 	1, // 1: OrderService.CreateOrder:input_type -> CreateOrderRequest
-	2, // 2: OrderService.CreateOrder:output_type -> CreateOrderResponse
-	2, // [2:3] is the sub-list for method output_type
-	1, // [1:2] is the sub-list for method input_type
+	3, // 2: OrderService.GetOrders:input_type -> GetOrderRequest
+	2, // 3: OrderService.CreateOrder:output_type -> CreateOrderResponse
+	4, // 4: OrderService.GetOrders:output_type -> GetOrderResponse
+	3, // [3:5] is the sub-list for method output_type
+	1, // [1:3] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
 	1, // [1:1] is the sub-list for extension extendee
 	0, // [0:1] is the sub-list for field type_name
